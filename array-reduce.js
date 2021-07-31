@@ -14,6 +14,7 @@ Array.prototype.myReduce = function(callback, initialValue) {
 } 
 
 const arr = [1,2,3];
+const arr1 = ['kiran', 'kiran', 'kiran', 'karipe','karipe'];
 
 const add = (total, val) => {
     return total + val;
@@ -24,4 +25,4 @@ const wordCount = (acc, word) => {
     return acc;
 }
 arr.myReduce(add, 0);
-arr.myReduce(wordCount, {});
+arr1.myReduce(wordCount, {});
