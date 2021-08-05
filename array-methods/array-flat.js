@@ -21,3 +21,23 @@ console.log(givenArr.reduce((acc, curVal) => {
 
 console.log([].concat.apply([], givenArr)); // it does only one level of flatten
 
+
+
+var input = [1, [2, [ [3, 4], 5], 6]];
+function flatten(input) {
+    var i, placeHolder = [input], lastIndex = [-1], out = [];
+    while (placeHolder.length) {
+        input = placeHolder.pop();
+        i = lastIndex.pop() + 1;
+        for (; i < input.length; ++i) {
+            if (Array.isArray(input[i])) {
+                placeHolder.push(input);
+                lastIndex.push(i);
+                input = input[i];
+                i = -1;
+            } else out.push(input[i]);
+        }
+    }
+    return out;
+}
+console.log(flatten(input));
