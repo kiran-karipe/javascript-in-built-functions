@@ -1,4 +1,5 @@
 // Four ways to select elements
+
 // 1. By ID
 
 const element = document.getElementById('one');
