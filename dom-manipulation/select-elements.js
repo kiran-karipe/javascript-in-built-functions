@@ -1,4 +1,4 @@
-// Four ways to select elements
+// Four ways to select HTML elements
 
 // 1. By ID
 
